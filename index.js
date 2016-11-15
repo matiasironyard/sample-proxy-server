@@ -2,7 +2,7 @@ var express = require('express');
 var request = require('request');
 var app = express();
 var cors = require('cors');
-var yelp = require('yelp-fusion');
+var Yelp = require('yelp');
 
 app.use(cors()); //allows overriding cross origin policy (use npm install if needed)
 
