@@ -25,6 +25,7 @@
   "keywords": [
     "node",
     "heroku",
-    "express"
+    "express",
+    "yelp-fusion"
   ]
 }
