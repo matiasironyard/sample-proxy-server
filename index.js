@@ -20,24 +20,9 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
-// app.get('/api', function(req, res){
-//   var token = yelp.accessToken(clientId, clientSecret).then(response => {
-//     console.log(response.jsonBody.access_token);
-//   }).catch(e => {
-//     console.log(e);
-//   });
-
-//   var client = yelp.client(token);
-//   var phone = req.query.phone;
-
-//   client.phoneSearch({
-//     phone: phone,
-//   }).then(response => {
-//     console.log(response.jsonBody.businesses[0].name);
-//   }).catch(e => {
-//     console.log(e);
-//   });
-//   res.send(response);
+yelp.phoneSearch({ phone: '+15555555555' })
+  .then(console.log)
+  .catch(console.error);
 
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
