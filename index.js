@@ -4,12 +4,6 @@ var app = express();
 var cors = require('cors');
 var Yelp = require('yelp');
 
-var yelp = new Yelp({
-  consumer_key: 'consumer-key',
-  consumer_secret: 'consumer-secret',
-  token: 'token',
-  token_secret: 'token-secret',
-});
 
 app.use(cors()); //allows overriding cross origin policy (use npm install if needed)
 
@@ -22,9 +16,18 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 app.get('/api', function(req, res){ // listens for request on /api route
   
-yelp.phoneSearch({ phone: '+15555555555' })
+ var yelp = new Yelp({
+  consumer_key: '-5M9jfXB_KlLZSry7N0y7g',
+  consumer_secret: '-CsnsEpO-AIvCUgJkzzMFxz4n7U',
+  token: 'XVoJD8K_7G7HFLBBEZswvl1u3idr7Ete',
+  token_secret: '3O88cZubxXw_0FqMW4zLsSqCZFU',
+});
+  
+var phone = req.query.phone;
+yelp.phoneSearch({ phone: phone })
   .then(console.log)
   .catch(console.error);
+  res.send('we got a business');
     }
    });
 });
