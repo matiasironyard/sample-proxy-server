@@ -13,7 +13,7 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
-// app.get('/api', function(req, res){
+app.get('/api', function(req, res){
   var token = yelp.accessToken(clientId, clientSecret).then(response => {
     console.log(response.jsonBody.access_token);
   }).catch(e => {
