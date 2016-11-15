@@ -20,9 +20,14 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
+app.get('/api', function(req, res){ // listens for request on /api route
+  
 yelp.phoneSearch({ phone: '+15555555555' })
   .then(console.log)
   .catch(console.error);
+    }
+   });
+});
 
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
