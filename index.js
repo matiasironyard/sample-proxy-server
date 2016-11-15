@@ -34,9 +34,9 @@ app.get('/api', function(req, res){
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
 
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 3000;
 app.listen(port);
-console.log('Server running on port 80');
+console.log('Server running on port 3000');
 
 
 /* BreweryDB API Example */
