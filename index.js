@@ -4,6 +4,13 @@ var app = express();
 var cors = require('cors');
 var Yelp = require('yelp');
 
+var yelp = new Yelp({
+  consumer_key: 'consumer-key',
+  consumer_secret: 'consumer-secret',
+  token: 'token',
+  token_secret: 'token-secret',
+});
+
 app.use(cors()); //allows overriding cross origin policy (use npm install if needed)
 
 app.get('/test', function(req, res){ // listens for request on /api route
