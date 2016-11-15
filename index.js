@@ -12,24 +12,20 @@ app.get('/test', function(req, res){ // listens for request on /api route
 
 /* PUT YOUR CODE BETWEEN COMMENTS */
 
-// app.get('/api', function(req, res){
-//   var token = yelp.accessToken(clientId, clientSecret).then(response => {
-//     console.log(response.jsonBody.access_token);
-//   }).catch(e => {
-//     console.log(e);
-//   });
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://api.yelp.com/v3/businesses/search/phone?phone=%2018645955240",
+  "method": "GET",
+  "headers": {
+    "authorization": "Bearer i565rg5Yi8NoRyCmfTHX5ngjnlRSCmkQkG0CHSibDWzBY2OJQd3LNU0WfEsf9XibRZAiCBriAohxLkjbsZ4IfqMi-al9M4xp9DYM9vGZM6MlyNW45Z8earlIU94pWHYx",
 
-//   var client = yelp.client(token);
-//   var phone = req.query.phone;
+  }
+}
 
-//   client.phoneSearch({
-//     phone: phone
-//   }).then(response => {
-//     console.log(response.jsonBody.businesses[0].name);
-//   }).catch(e => {
-//     console.log(e);
-//   });
-//   res.send(response);
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
 
 
 /* PUT YOUR CODE ABOVE THIS COMMENT */
